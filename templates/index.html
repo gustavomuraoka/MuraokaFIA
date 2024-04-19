@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+    {% block content %}
+
+    <p class="indexes">
+        |
+        {% set lista_index = ["IBOV", "IBRX", "S&P500", "NIKKEI 225", "NASDAQ", "Dow Jones", "Shangai", "S&P Merval", "PETR4", "VALE3"] %}
+        {% set lista_perc = [1.63, 1.74, 0.75, -0.83, 0.9, 0.89, -0.3, -99.9, 2.06, 1.26] %}
+
+        {% for i in range(0, 10) %}
+            {% if lista_perc[i] > 0 %}
+                {{lista_index[i]}} <span style="color: green;">+{{lista_perc[i]}}%</span> | 
+            {% else %}
+            {{lista_index[i]}} <span style="color: red;">{{lista_perc[i]}}%</span> | 
+            {% endif %} 
+        {% endfor %}
+    </p>
+
+    <div>
+        <img src="{{ url_for('static', filename='images/Rentabilidade.png')}}" class="graficorentabilidade" alt="Rentabilidade do fundo">
+    </div>
+
+
+
+    {% endblock %}
