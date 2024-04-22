@@ -4,7 +4,8 @@ body {
 
 .logonavbar {
     color: white;
-    font-family: 'EB Garamond';font-size: 22px;;
+    font-family: 'EB Garamond';
+    font-size: 22px;
 }
 
 .navbarinfo {
@@ -20,7 +21,7 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1px;
+    margin-top: 15px;
     width: 80%;
     height: 500px;
     border-radius: 5px;
@@ -33,4 +34,23 @@ a {
     display: block;
     position:relative;
     margin: auto;
+}
+
+.titulo-grafico {
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'EB Garamond'; 
+    font-size: 22px;
+}
+
+.pindex {
+    text-align: center;
+}
+
+.desc {
+    width: 60%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
