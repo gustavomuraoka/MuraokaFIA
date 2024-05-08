@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(238, 238, 248);
+}
+
+.logonavbar {
+    color: white;
+    font-family: 'EB Garamond';
+    font-size: 22px;
+}
+
+.navbarinfo {
+    color: white;
+    margin-right: 30px;
+}
+
+a {
+    color: white;
+}
+
+.graficorentabilidade {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 80%;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.indexes {
+    background-color: rgb(59, 59, 59);
+    color: white;
+    text-align: center;
+    display: block;
+    position:relative;
+    margin: auto;
+}
+
+.titulo-grafico {
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'EB Garamond'; 
+    font-size: 22px;
+}
+
+.pindex {
+    text-align: center;
+}
+
+.desc {
+    width: 60%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.RIForm {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.RILabel {
+    margin-top: 15px;
+    
+}
