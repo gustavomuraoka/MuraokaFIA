@@ -12,7 +12,7 @@ temperatura_reg double not null,
 volume_reg double not null
 ); */
 
-CREATE TABLE IF NOT EXISTS Usuario(
+CREATE TABLE IF NOT EXISTS usuario(
     id_user int primary key auto_increment not null,
     user_nome varchar(30) not null,
     user_email varchar(30) not null

@@ -4,9 +4,9 @@ class Connection:
     @staticmethod
     def createConn():
         mydb = mysql.connector.connect(
-            host="localhost",
+            host="db",
             user="root",
-            password='',
+            password='root',
             database="RI",
         )
 
@@ -17,7 +17,7 @@ class Connection:
 
         mycursor = mydb.cursor()
         print(nome, email)
-        sql = f'INSERT INTO usuario (user_nome, user_email) VALUES ("{nome}", "{email}");'
+        sql = f'INSERT INTO Usuario (user_nome, user_email) VALUES ("{nome}", "{email}");'
         mycursor.execute(sql)
 
         mydb.commit()
