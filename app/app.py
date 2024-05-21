@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-import mysql.connector
+from flask import Flask, render_template, request, redirect
+from conn import Connection
 
 app = Flask(__name__)
 
@@ -10,26 +10,17 @@ def index():
 @app.route("/RI", methods=['GET', 'POST'])
 def RI():
     if request.method == 'POST':
-        mydb = mysql.connector.connect(
-            host="db",
-            user="root",
-            password="root",
-            database="RI",
-        )
+        
+        mydb = Connection.createConn()
 
         nome = request.form['nome']
         email = request.form['email']
 
+        Connection.insertDB(mydb, nome, email)
+
         print(nome, email)
 
-        mycursor = mydb.cursor()
-
-        sql = f'INSERT INTO Usuario (user_nome, user_email) VALUES ({nome}, {email})'
-        mycursor.execute(sql)
-
-        mydb.commit()
-
-        return render_template("RI.html")
+        return redirect("/")
 
     return render_template("RI.html")
 
